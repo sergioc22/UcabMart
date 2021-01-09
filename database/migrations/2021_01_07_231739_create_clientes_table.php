@@ -15,8 +15,8 @@ class CreateClientesTable extends Migration
     {
         Schema::create('clientes', function (Blueprint $table) {
             $table->id('cl_Codigo');
-            //$table->unsignedBigInteger('fk_ti_Codigo');
-            //$table->foreign('fk_ti_Codigo')->references('ti_Codigo')->on('tiendas');
+            $table->unsignedBigInteger('fk_ti_Codigo');
+            $table->foreign('fk_ti_Codigo')->references('ti_Codigo')->on('tiendas');
             $table->timestamps();
         });
     }
